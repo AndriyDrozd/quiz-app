@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container__main-information">
+        <div *ngFor="let question of arrayOfQuestions; let i = index;" style="display: flex; flex-direction: column;">
+            <div *ngIf="counter === i">
+                <h1 style="text-align: center;">{{question.name}}</h1>
+                <div class="container__main-questions">
+                <div *ngFor="let questions of question.options" class="container__questions">
+                    <input type="checkbox" style="margin-top: 1px; margin-right: 10px;" [value]="questions.isAnswer" (change)="toggleMark($event, questions)" [disabled]="isChecked">
+                    {{ questions.name }}
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer__buttons">
+            <button *ngIf="counter < arrayOfQuestions.length - 1" (click)="nextQuestion()">Далі</button>
+            <button (click)="finishTest()">Закінчити</button>
+        </div>
+    </div>
+</div>

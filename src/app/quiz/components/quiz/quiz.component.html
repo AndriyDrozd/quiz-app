@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="header">
+        <div class="header__logo" routerLink="/">
+            <span>Головна</span>
+        </div>
+        <div class="header__logout" (click)="logout()">
+            <span>Вихід</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main__side-bar">
+            <ul class="">
+                <li class="main__components" routerLink="/">
+                    <span>Тест</span>
+                </li>
+                <li class="main__components" routerLink="/quiz/result">
+                    <span>Результат</span>
+                </li>
+            </ul>
+        </div>
+        <div class="main__content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+

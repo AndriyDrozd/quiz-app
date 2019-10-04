@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="container__main-information">
+        <h1>Виберіть тест</h1>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div *ngFor="let kindOfProfession of kindsOfProfession" class="main-information__kinds-of-profession" (click)="selectTest(kindOfProfession)">
+                <span>
+                    {{kindOfProfession.name}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

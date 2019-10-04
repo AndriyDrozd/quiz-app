@@ -1,0 +1,221 @@
+.image1 
+  max-height: 1500px
+  height: 1000px
+  background-image: linear-gradient(to bottom right, #000001, #2C3446)
+  font-family: sans-serif
+
+
+.loginbox 
+  width: 320px
+  background: #2C3446
+  color: #fff
+  top: 50%
+  left: 50%
+  position: absolute
+  transform: translate(-50%, -50%)
+  box-sizing: border-box
+  padding: 70px 30px
+
+
+.avatar 
+  width: 100px
+  height: 100px
+  border-radius: 50%
+  position: absolute
+  top: -50px
+  left: calc(50% - 50px)
+
+
+h1 
+  margin: 0
+  padding: 0 0 20px
+  text-align: center
+  font-size: 22px
+
+
+.loginbox p 
+  margin: 0
+  padding: 0
+  font-weight: bold
+  margin-top: 10px
+
+
+.loginbox input 
+  width: 100%
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active 
+  transition: background-color 5000s ease-in-out 0s
+  -webkit-text-fill-color: #fff !important
+
+
+
+button 
+  outline: none
+
+
+
+.loginbox input[type="text"],
+input[type="password"] 
+  border: none
+  border-bottom: 1px solid #fff
+  background: transparent
+  outline: none
+  height: 40px
+  color: #fff
+  font-size: 16px
+
+
+.form-help-text 
+  color: #fb494d
+  font-size: 15px
+  display: block
+  margin-top: 15px
+
+
+.form-help-text-error 
+  color: #fb494d
+  font-size: 15px
+  display: block
+
+
+
+.submitButton[disabled] 
+  height: 40px
+  width: 260px
+  margin-top: 15px
+  border: none
+
+
+.submitButton[disabled]:hover 
+  cursor: not-allowed
+  background-color: #e84118
+  border: none
+
+
+.submitButton 
+  height: 40px
+  width: 260px
+  margin-top: 15px
+  transition: 0.5s
+  background-color: #008080
+  color: #fff
+  border: none
+
+
+.submitButton:hover 
+  cursor: pointer
+  background-color: #4cd137
+  color: white
+  border: none
+
+
+
+.loginbox a 
+  text-decoration: none
+  font-size: 12px
+  line-height: 20px
+  color: darkgrey
+
+
+
+
+
+
+
+.awesome 
+  background-color: red
+
+
+
+$brand-success: #5cb85c
+$loader-size: 7em
+$check-height: $loader-size/2
+$check-width: $check-height/2
+$check-left: ($loader-size/6 + $loader-size/12)
+$check-thickness: 3px
+$check-color: $brand-success
+
+.circle-loader 
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  border-left-color: $check-color
+  animation: loader-spin 1.2s infinite linear
+  position: relative
+  display: inline-block
+  vertical-align: top
+  border-radius: 50%
+  width: 25px
+  height: 25px
+
+
+.load-complete 
+  -webkit-animation: none
+  animation: none
+  border: none
+  transition: border 5s ease-out
+
+
+
+.checkmark 
+
+  &.draw:after 
+    animation-duration: 800ms
+    animation-timing-function: ease
+    animation-name: checkmark
+    transform: scaleX(-1) rotate(135deg)
+  
+
+  &:after 
+    opacity: 1
+    height: 20px
+    width: 10px
+    transform-origin: left top
+    border-right: $check-thickness solid $check-color
+    border-top: $check-thickness solid $check-color
+    content: ''
+    left: 0px
+    top: 13px
+    position: absolute
+  
+
+
+
+
+
+@keyframes loader-spin 
+  0% 
+    transform: rotate(0deg)
+  
+
+  100% 
+    transform: rotate(360deg)
+  
+
+
+@keyframes checkmark 
+  0% 
+    height: 0
+    width: 0
+    opacity: 1
+  
+
+  20% 
+    height: 0
+    width: 10px
+    opacity: 1
+  
+
+  40% 
+    height: 20px
+    width: 10px
+    opacity: 1
+  
+
+  100% 
+    height: 20px
+    width: 10px
+    opacity: 1
+  
