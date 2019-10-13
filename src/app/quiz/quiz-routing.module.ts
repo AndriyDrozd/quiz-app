@@ -5,6 +5,7 @@ import { KindOfProfessionComponent } from './components/kind-of-profession/kind-
 import { TestComponent } from './components/test/test.component';
 import { ResultComponent } from './components/result/result.component';
 import { NewsComponent } from './components/news/news.component';
+import { CreateNewsComponent } from './components/create-news/create-news.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
         {
           path: 'news',
           component: NewsComponent
+        },
+        {
+          path: 'create-news',
+          component: CreateNewsComponent
         },
         {
           path: '',

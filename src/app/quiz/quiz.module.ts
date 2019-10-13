@@ -9,6 +9,9 @@ import { ArrayPipePipe } from './components/pipes/array-pipe.pipe';
 import { IconComponent } from '../share/icons/components/icon/icon.component';
 import { ToogleTextDirective } from './components/directives/toogle-text.directive';
 import { NewsComponent } from './components/news/news.component';
+import { CreateNewsComponent } from './components/create-news/create-news.component';
+import { VirtualScrollModule } from 'angular2-virtual-scroll';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,11 +24,15 @@ import { NewsComponent } from './components/news/news.component';
     ArrayPipePipe,
     IconComponent,
     ToogleTextDirective,
-    NewsComponent
+    NewsComponent,
+    CreateNewsComponent
   ],
   imports: [
     CommonModule,
-    QuizRoutingModule
+    QuizRoutingModule,
+    VirtualScrollModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class QuizModule { }

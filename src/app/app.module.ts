@@ -7,12 +7,10 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from "@angular/fire/auth";
-// import { IconComponent } from './share/icons/components/icon/icon.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // IconComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

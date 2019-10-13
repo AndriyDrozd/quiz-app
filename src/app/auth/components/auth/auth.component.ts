@@ -56,7 +56,7 @@ export class AuthComponent implements OnInit {
 
   private tryLogin(): void {
     const getUserUid = localStorage.getItem('uid');
-    getUserUid !== null ? this.router.navigate(['/quiz']) : null;
+    getUserUid !== null ? this.router.navigate(['/quiz/dashboard']) : null;
   }
 
   private showSpinner(): void {
@@ -72,7 +72,7 @@ export class AuthComponent implements OnInit {
     this.showSpinner();
     this.authService.login(this.loginForm.value).then(data => {
       this.setUidUserInLocalstorage(data.user.uid);
-      this.router.navigate(['/quiz']);
+      this.router.navigate(['/quiz/dashboard']);
     }, err => {
       setTimeout(() => {
         this.showSpinner();
