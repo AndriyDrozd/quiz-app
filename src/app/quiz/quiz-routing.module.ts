@@ -4,6 +4,7 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { KindOfProfessionComponent } from './components/kind-of-profession/kind-of-profession.component';
 import { TestComponent } from './components/test/test.component';
 import { ResultComponent } from './components/result/result.component';
+import { NewsComponent } from './components/news/news.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
     component: QuizComponent,
     children: [
         {
-            path: '',
+            path: 'dashboard',
             component: KindOfProfessionComponent
         },
         {
@@ -22,6 +23,14 @@ const routes: Routes = [
         {
           path: 'result',
           component: ResultComponent
+        },
+        {
+          path: 'news',
+          component: NewsComponent
+        },
+        {
+          path: '',
+          redirectTo: '/dashboard'
         }
     ]
   }

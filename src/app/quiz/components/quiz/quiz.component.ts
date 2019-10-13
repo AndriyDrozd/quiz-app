@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class QuizComponent implements OnInit {
 
+  showText = true;
+
   constructor(
     private router: Router
   ) { }
@@ -15,7 +17,11 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
   }
 
-  logout() {
+  toogleText(): void {
+    this.showText = !this.showText;
+  }
+
+  logout(): void {
     localStorage.clear();
     sessionStorage.clear();
     this.router.navigate(['/']);

@@ -1,21 +1,41 @@
 <div class="container">
     <div class="header">
-        <div class="header__logo" routerLink="/">
-            <span>Головна</span>
+        <div class="header__logo" (click)="toogleText()" [ngClass]="{
+            toggleSidebar: !showText
+        }">
+            <i class="material-icons" comp-icon>
+                <ng-container *ngIf="showText; else anotherArrow">
+                    arrow_back_ios
+                </ng-container>
+
+                <ng-template #anotherArrow>
+                    arrow_forward_ios
+                </ng-template>
+            </i>
         </div>
         <div class="header__logout" (click)="logout()">
-            <span>Вихід</span>
+            <i class="material-icons" comp-icon>
+                cancel
+            </i>
         </div>
     </div>
 
     <div class="main">
-        <div class="main__side-bar">
+        <div class="main__side-bar" [ngClass]="{
+            toggleSidebar: !showText
+        }">
             <ul class="">
-                <li class="main__components" routerLink="/">
-                    <span>Тест</span>
+                <li class="main__components" routerLink="dashboard">
+                    <span *ngIf="showText">Тест</span>
+                    <i class="material-icons" comp-icon>create</i>
                 </li>
                 <li class="main__components" routerLink="/quiz/result">
-                    <span>Результат</span>
+                    <span *ngIf="showText">Результат</span>
+                    <i class="material-icons" comp-icon>account_circle</i>
+                </li>
+                <li class="main__components" routerLink="/quiz/news">
+                    <span *ngIf="showText">Новини</span>
+                    <i class="material-icons" comp-icon>email</i>
                 </li>
             </ul>
         </div>

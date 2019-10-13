@@ -5,25 +5,24 @@
     display: flex
     justify-content: space-between
     align-items: center
-    height: 10vh
+    height: 7vh
     margin: 0 auto
-    background-color: #c7ecee
+    background-color: #8c8a88
 
     .header__logo
-        font-size: 18px
-        margin-left: 2.5vw
-        padding: 10px
-        background-color: #ffbe76
+        display: flex
+        justify-content: center
+        align-items: center
         color: white
         cursor: pointer
+        height: 100%
+        width: 15vw
+        box-sizing: border-box
+        border-right: 1px solid black
+        transition: 0.3s
 
     .header__logout
-        font-size: 18px
         margin-right: 2.5vw
-        padding: 10px
-        border-radius: 2px
-        background-color: #ffbe76
-        color: white
         cursor: pointer
 
 .main
@@ -32,13 +31,16 @@
 
     .main__side-bar
         width: 15vw
-        height: calc( 100vh - 10vh )
+        height: calc( 100vh - 7vh )
         background-color: #4834d4
+        transition: 0.3s
 
 
     .main__content
-        width: 84.5vw
-        box-shadow: -11px 0 8px -10px rgba(68,68,68,0.6)
+        width: 82vw
+        height: 86vh
+        margin: 18px auto
+        box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.3)
 
     ul
         box-shadow: 5px 5px 5px rgba(68,68,68,0.6)
@@ -53,9 +55,19 @@
         border-bottom: 1px solid black
         transition: 0.3s
 
+        span
+            margin: 0 auto
+
+        i
+            padding: 0px 20px
+
         &:hover
             height: 11vh
             cursor: pointer
+
+
+.toggleSidebar
+    width: 5vw !important
             
             
             

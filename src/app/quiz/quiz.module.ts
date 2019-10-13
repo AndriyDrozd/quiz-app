@@ -6,6 +6,9 @@ import { KindOfProfessionComponent } from './components/kind-of-profession/kind-
 import { TestComponent } from './components/test/test.component';
 import { ResultComponent } from './components/result/result.component';
 import { ArrayPipePipe } from './components/pipes/array-pipe.pipe';
+import { IconComponent } from '../share/icons/components/icon/icon.component';
+import { ToogleTextDirective } from './components/directives/toogle-text.directive';
+import { NewsComponent } from './components/news/news.component';
 
 
 
@@ -15,7 +18,10 @@ import { ArrayPipePipe } from './components/pipes/array-pipe.pipe';
     KindOfProfessionComponent,
     TestComponent,
     ResultComponent,
-    ArrayPipePipe
+    ArrayPipePipe,
+    IconComponent,
+    ToogleTextDirective,
+    NewsComponent
   ],
   imports: [
     CommonModule,
