@@ -1,7 +1,8 @@
-<form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
-
-    <input type="text" placeholder="Введіть заголовок" formControlName="header">
-    <input type="text" placeholder="Введіть детальний опис" formControlName="description">
-    <input type="text" placeholder="Введіть силку на картинку" formControlName="img">
-    <button type="submit">Відправити</button>
-</form>
+<div class="container">
+    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Введіть заголовок" formControlName="header">
+        <input type="text" placeholder="Введіть детальний опис" formControlName="description">
+        <input type="text" placeholder="Введіть силку на картинку" formControlName="img">
+        <button type="submit">Відправити</button>
+    </form>
+</div>

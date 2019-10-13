@@ -12,8 +12,10 @@
             </div>
         </div>
         <div class="footer__buttons">
-            <button *ngIf="counter < arrayOfQuestions.length - 1" (click)="nextQuestion()">Далі</button>
-            <button (click)="finishTest()">Закінчити</button>
+            <button *ngIf="counter < arrayOfQuestions.length - 1; else finishButton" (click)="nextQuestion()">Далі</button>
+            <ng-template #finishButton>
+                <button (click)="finishTest()">Закінчити</button>
+            </ng-template>
         </div>
     </div>
 </div>
