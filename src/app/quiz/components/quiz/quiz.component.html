@@ -37,6 +37,30 @@
                     <span *ngIf="showText">Новини</span>
                     <i class="material-icons" comp-icon>email</i>
                 </li>
+                <li class="main__components" routerLink="/quiz/mark-graphic">
+                    <span *ngIf="showText">Графік оцінювання</span>
+                    <i class="material-icons" comp-icon>alarm</i>
+                </li>
+                <li class="main__components" (click)="openPdf('https://vkksu.gov.ua/userfiles/doc/zag_results.pdf')">
+                    <span *ngIf="showText">Загальні результати іспиту</span>
+                    <i class="material-icons" comp-icon>file_copy</i>
+                </li>
+                <li class="main__components" (click)="openPdf('https://vkksu.gov.ua/userfiles/poriadok_new.pdf')">
+                    <span *ngIf="showText">Судівське досьє</span>
+                    <i class="material-icons" comp-icon>note</i>
+                </li>
+                <li class="main__components" (click)="openPdf('https://drive.google.com/file/d/1x6c7DqP8LJv9NhEuGUu-q-bz-Sc7TVAE/view')">
+                    <span *ngIf="showText">Декодовані резулитати іспитів</span>
+                    <i class="material-icons" comp-icon>subtitles</i>
+                </li>
+                <li class="main__components" (click)="openPdf('https://vkksu.gov.ua/userfiles/doc/coded_results1402.pdf')">
+                    <span *ngIf="showText">Кодові результати іспитів</span>
+                    <i class="material-icons" comp-icon>web_asset</i>
+                </li>
+                <li class="main__components" (click)="openPdf('https://vkksu.gov.ua/ua/ociniuwannia-suddiw/korisni-matieriali/zrazki-tiestowich-zapitan-/')">
+                    <span *ngIf="showText">Первинне кваліфікаційне оцінювання</span>
+                    <i class="material-icons" comp-icon>call_to_action</i>
+                </li>
             </ul>
         </div>
         <div class="main__content">

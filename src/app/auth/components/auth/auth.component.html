@@ -32,7 +32,13 @@
             <div class="checkmark draw" *ngIf="loaded"></div>
           </div>
         </button>
+
+        
       </form>
+      <span (click)="signUp()" *ngIf="!isSignUp" style="color: white; cursor: pointer;">Зареєструватися</span>
+      <span *ngIf="isSignUp">
+          <span (click)="signUp()" style="color: white; cursor: pointer;">Залогінитися</span>
+      </span>
     </div>
 </div>
   

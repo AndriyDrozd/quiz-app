@@ -12,6 +12,7 @@ import { NewsComponent } from './components/news/news.component';
 import { CreateNewsComponent } from './components/create-news/create-news.component';
 import { VirtualScrollModule } from 'angular2-virtual-scroll';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MarkGraphicComponent } from './components/mark-graphic/mark-graphic.component';
 
 
 
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     IconComponent,
     ToogleTextDirective,
     NewsComponent,
-    CreateNewsComponent
+    CreateNewsComponent,
+    MarkGraphicComponent
   ],
   imports: [
     CommonModule,

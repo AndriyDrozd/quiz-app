@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-news',
@@ -10,7 +11,7 @@ import { map } from 'rxjs/operators';
 })
 export class NewsComponent implements OnInit {
 
-  items;
+  items: Observable<any>;
 
   credentialsUser = localStorage.getItem('uid');
 
@@ -18,13 +19,8 @@ export class NewsComponent implements OnInit {
   constructor(public db: AngularFirestore) { }
 
   ngOnInit() {
-    this.db.collection('news').snapshotChanges()
-    .pipe(map(data => data.map(data1 => data1.payload.doc.data())))
-    .subscribe(news => {
-      if(news) {
-        this.items = news;
-      }
-    });
+    this.items = this.db.collection('news').snapshotChanges().
+    pipe(map(data => data.map(data1 => data1.payload.doc.data())))
   }
 
 }

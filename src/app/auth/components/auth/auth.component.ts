@@ -17,6 +17,7 @@ export class AuthComponent implements OnInit {
   public loaded = false;
   public isError;
   public spinner = false;
+  public isSignUp = false;
 
   loginForm: FormGroup;
 
@@ -68,16 +69,32 @@ export class AuthComponent implements OnInit {
     localStorage.setItem('uid', uid);
   }
 
+  signUp() {
+    this.isSignUp = !this.isSignUp;
+  }
+
   onSubmit() {
     this.showSpinner();
-    this.authService.login(this.loginForm.value).then(data => {
-      this.setUidUserInLocalstorage(data.user.uid);
-      this.router.navigate(['/quiz/dashboard']);
-    }, err => {
-      setTimeout(() => {
-        this.showSpinner();
-      }, 500);
-    });
+
+    if(this.isSignUp) {
+      this.authService.signUp(this.loginForm.value).then(data => {
+        this.setUidUserInLocalstorage(data.user.uid);
+        this.router.navigate(['/quiz/dashboard']);
+      }, err => {
+        setTimeout(() => {
+          this.showSpinner();
+        }, 500);
+      });
+    } else {
+      this.authService.login(this.loginForm.value).then(data => {
+        this.setUidUserInLocalstorage(data.user.uid);
+        this.router.navigate(['/quiz/dashboard']);
+      }, err => {
+        setTimeout(() => {
+          this.showSpinner();
+        }, 500);
+      });
+    }
   }
 
 

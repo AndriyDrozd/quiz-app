@@ -6,6 +6,7 @@ import { TestComponent } from './components/test/test.component';
 import { ResultComponent } from './components/result/result.component';
 import { NewsComponent } from './components/news/news.component';
 import { CreateNewsComponent } from './components/create-news/create-news.component';
+import { MarkGraphicComponent } from './components/mark-graphic/mark-graphic.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
         {
           path: 'create-news',
           component: CreateNewsComponent
+        },
+        {
+          path: 'mark-graphic',
+          component: MarkGraphicComponent
         },
         {
           path: '',

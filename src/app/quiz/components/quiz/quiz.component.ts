@@ -17,6 +17,10 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
   }
 
+  openPdf(url: string): void {
+    window.open(url, '_blank');
+  }
+
   toogleText(): void {
     this.showText = !this.showText;
   }
