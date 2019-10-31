@@ -77,31 +77,27 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.showSpinner();
+    this.showSpinner();
 
-    // if(this.isSignUp) {
-    //   this.authService.signUp(this.loginForm.value).then(data => {
-    //     this.setUidUserInLocalstorage(data.user.uid);
-    //     this.router.navigate(['/quiz/news']);
-    //   }, err => {
-    //     setTimeout(() => {
-    //       this.showSpinner();
-    //     }, 500);
-    //   });
-    // } else {
-    //   this.authService.login(this.loginForm.value).then(data => {
-    //     this.setUidUserInLocalstorage(data.user.uid);
-    //     this.router.navigate(['/quiz/news']);
-    //   }, err => {
-    //     setTimeout(() => {
-    //       this.showSpinner();
-    //     }, 500);
-    //   });
-    // }
-    
-    const authType = this.isSignUp ? 'singUp' : 'logIn';
-
-    this.store.dispatch(new AuthActions.Auth(authType, this.loginForm.value));
+    if(this.isSignUp) {
+      this.authService.signUp(this.loginForm.value).then(data => {
+        this.setUidUserInLocalstorage(data.user.uid);
+        this.router.navigate(['/quiz/news']);
+      }, err => {
+        setTimeout(() => {
+          this.showSpinner();
+        }, 500);
+      });
+    } else {
+      this.authService.login(this.loginForm.value).then(data => {
+        this.setUidUserInLocalstorage(data.user.uid);
+        this.router.navigate(['/quiz/news']);
+      }, err => {
+        setTimeout(() => {
+          this.showSpinner();
+        }, 500);
+      });
+    }
 
   }
 
